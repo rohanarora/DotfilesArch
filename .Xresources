@@ -15,8 +15,8 @@ URxvt.scrollStyle:          rxvt
 URxvt.scrollBar:            false
 
 ! Fonts
-URxvt*font: xft:DejavuSansMono:pixelsize=14:antialias=true:hinting=true:medium
-URxvt*boldFont: xft:DejavuSansMono:pixelsize=14:antialias=true:hinting=true:bold
+URxvt*font: xft:DejavuSansMono:pixelsize=18:antialias=true:hinting=true:medium
+URxvt*boldFont: xft:DejavuSansMono:pixelsize=18:antialias=true:hinting=true:bold
 
 ! Login Shell
 URxvt*loginShell: true

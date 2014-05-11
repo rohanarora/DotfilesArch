@@ -70,6 +70,10 @@ export EDITOR='vim'
 
 # Fix for could not open a connection to your authentication agent on ssh-add
 eval $(ssh-agent)
+# ssh-add runs when needed and is destroyed afterwards
+ssh-add -l >/dev/null || alias ssh='ssh-add -l >/dev/null || ssh-add && unalias ssh; ssh'
+
+
 
 # Compilation flags
 export ARCHFLAGS="-arch $(uname -m)"

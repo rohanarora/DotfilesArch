@@ -76,7 +76,8 @@ export ARCHFLAGS="-arch $(uname -m)"
 
 export ANDROID_SDK=$HOME/android/android-sdk-linux
 export ANDROID_NDK=$HOME/android/android-ndk-r9d
+export PEBBLE_SDK=$HOME/android/PebbleSDK
 #bin for python2
 export PYTHON2=$HOME/bin
 
-export PATH=$ANDROID_SDK/tools:$ANDROID_SDK/platform-tools:$ANDROID_NDK:$PYTHON2:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/core_perl:$PATH
+export PATH=$ANDROID_SDK/tools:$ANDROID_SDK/platform-tools:$ANDROID_NDK:$PYTHON2:$PEBBLE_SDK/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/core_perl:$PATH

@@ -73,15 +73,17 @@ eval $(ssh-agent)
 # ssh-add runs when needed and is destroyed afterwards
 ssh-add -l >/dev/null || alias ssh='ssh-add -l >/dev/null || ssh-add && unalias ssh; ssh'
 
-
-
 # Compilation flags
 export ARCHFLAGS="-arch $(uname -m)"
 
-export ANDROID_SDK=$HOME/android/android-sdk-linux
+# Google Test Framework
+export GOOGLETESTDIR=$HOME/rithmio/FilteringCpp/gtest-1.7.0/lib
+
+# Android Developer SDK
+export ANDROID_SDK=$HOME/android/adt-bundle/sdk
 export ANDROID_NDK=$HOME/android/android-ndk-r9d
-export PEBBLE_SDK=$HOME/android/PebbleSDK
+
 #bin for python2
 export PYTHON2=$HOME/bin
-
-export PATH=$ANDROID_SDK/tools:$ANDROID_SDK/platform-tools:$ANDROID_NDK:$PYTHON2:$PEBBLE_SDK/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/core_perl:$PATH
+#export RUBY_GEM = $(ruby -rubygems -e "puts Gem.user_dir")/bin
+export PATH=$ANDROID_SDK/platform-tools:$ANDROID_SDK/tools:$ANDROID_NDK:$GOOGLETESTDIR:$PYTHON2:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/core_perl:$PATH

@@ -38,7 +38,7 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
-beautiful.init("~/.config/awesome/themes/default/theme.lua")
+beautiful.init("/usr/share/awesome/themes/default/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "urxvt"
@@ -80,7 +80,7 @@ end
 
 -- {{{ Tags
 -- Define a tag table which hold all screen tags.
--- tags = {}
+tags = {}
 -- for s = 1, screen.count() do
 --     -- Each screen has its own tag table.
 --     tags[s] = awful.tag({ 1, 2, 3, 4, 5, 6, 7, 8, 9 }, s, layouts[1])
@@ -94,6 +94,7 @@ tags = {
 }}
 
 for s = 1, screen.count() do
+    -- Each screen has its own tag table.
     tags[s] = awful.tag(tags.names, s, tags.layout)
 end
 -- }}}
@@ -285,6 +286,7 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey }, "p", function() menubar.show() end),
 		-- Lock Screen
 		awful.key({ modkey }, "F12", function () awful.util.spawn("xscreensaver-command --lock") end)
+
 )
 
 clientkeys = awful.util.table.join(

@@ -60,7 +60,7 @@ set visualbell
 " to wrap
 set wrap
 
-set autoindent
+" set autoindent
 " set no smartindent: break right-shifting on # lines
 
 " depth of auto-indentation
@@ -68,10 +68,10 @@ set autoindent
 set shiftwidth=2
 
 " spaces a tab should take
-set tabstop=2
+" set tabstop=2
 
 " covert tabs to spaces
-set noexpandtab
+" set noexpandtab
 
 " backspace to delete indents
 set softtabstop=2

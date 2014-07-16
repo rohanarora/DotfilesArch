@@ -285,7 +285,9 @@ globalkeys = awful.util.table.join(
     -- Menubar
     awful.key({ modkey }, "p", function() menubar.show() end),
     -- Lock Screen
-    awful.key({ modkey }, "F12", function () awful.util.spawn("xscreensaver-command --lock") end)
+    awful.key({ modkey }, "F12", function () awful.util.spawn("xscreensaver-command --lock") end),
+    -- Screenshot using import (Imagemagick Utility)
+    awful.key({ modkey }, "F11", function () awful.util.spawn("scrot -e 'mv $f ~/screenshots/ 2>/dev/null'") end)
 
 )
 

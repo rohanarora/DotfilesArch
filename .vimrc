@@ -23,6 +23,10 @@ Plugin 'https://github.com/scrooloose/syntastic.git'
 Plugin 'nathanaelkane/vim-indent-guides'
 "for javascript
 "Plugin "pangloss/vim-javascript"
+"for markdown
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
+
 call vundle#end()
 
 "}
@@ -187,6 +191,10 @@ hi IndentGuidesEven ctermbg=darkgrey
 if exists('+colorcolumn')
   set colorcolumn=80
 endif
+
+"Markdown to HTML
+nmap <leader>md :%!/usr/bin/vendor_perl/Markdown.pl --html4tags <cr>
+
 "let g:indent_guides_auto_colors = 0
 "autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3
 "autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4

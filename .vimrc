@@ -22,10 +22,10 @@ Plugin 'Lokaltog/vim-easymotion'
 Plugin 'https://github.com/scrooloose/syntastic.git'
 Plugin 'nathanaelkane/vim-indent-guides'
 "for javascript
-"Plugin "pangloss/vim-javascript"
-"for markdown
-Plugin 'godlygeek/tabular'
-Plugin 'plasticboy/vim-markdown'
+"Plugin 'pangloss/vim-javascript'
+
+"for gnupg
+Plugin 'jamessan/vim-gnupg'
 
 call vundle#end()
 
@@ -72,7 +72,7 @@ set wrap
 set shiftwidth=2
 
 " spaces a tab should take
-" set tabstop=2
+set tabstop=2
 
 " covert tabs to spaces
 " set noexpandtab
@@ -199,3 +199,32 @@ nmap <leader>md :%!/usr/bin/vendor_perl/Markdown.pl --html4tags <cr>
 "autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3
 "autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
 "}
+
+" run make on saving LaTeX file
+:autocmd BufWritePost *.tex make
+
+" Source: http://pig-monkey.com/2013/04/4/password-management-vim-gnupg/
+" GnuPG Extensions "
+" tells the GnuPG plugin to armor new files.
+let g:GPGPreferArmor=1
+
+" tells the GnuPG plugin to sign new files.
+let g:GPGPreferSign=1
+
+augroup GnuPGExtra
+" set extra file options.
+	autocmd BufReadCmd,FileReadCmd *.\(gpg\|asc\|pgp\) call SetGPGOptions()
+" automatically close unmodified files after inactivity.
+" autocmd CursorHold *.\(gpg\|asc\|pgp\) quit
+augroup END
+
+function SetGPGOptions()
+	" Set updatetime to 1 minute.
+	set updatetime=60000
+	" Fold at markers.
+	set foldmethod=marker
+	" Automatically close all folds.
+	set foldclose=all
+	" Only open folds with insert commands.
+	set foldopen=insert
+endfunction

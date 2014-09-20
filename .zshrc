@@ -69,21 +69,25 @@ export EDITOR='vim'
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
 # Fix for could not open a connection to your authentication agent on ssh-add
-eval $(ssh-agent)
+# eval $(ssh-agent)
 # ssh-add runs when needed and is destroyed afterwards
-ssh-add -l >/dev/null || alias ssh='ssh-add -l >/dev/null || ssh-add && unalias ssh; ssh'
+# ssh-add -l >/dev/null || alias ssh='ssh-add -l >/dev/null || ssh-add && unalias ssh; ssh'
 
 # Compilation flags
 export ARCHFLAGS="-arch $(uname -m)"
 
-# Google Test Framework
-export GOOGLETESTDIR=$HOME/rithmio/FilteringCpp/gtest-1.7.0/lib
-
 # Android Developer SDK
-export ANDROID_SDK=$HOME/android/adt-bundle/sdk
-export ANDROID_NDK=$HOME/android/android-ndk-r9d
+export ANDROID_SDK=$HOME/android/adt-bundle-linux-x86_64/sdk
+export ANDROID_NDK=$HOME/android/android-ndk-r10
 
-#bin for python2
+#Neuron Setup
+export IV=$HOME/CSL/NEURON/iv
+export N=$HOME/CSL/NEURON/nrn
+export CPU=x86_64
+
+# bin for python2
 export PYTHON2=$HOME/bin
-#export RUBY_GEM = $(ruby -rubygems -e "puts Gem.user_dir")/bin
-export PATH=$ANDROID_SDK/platform-tools:$ANDROID_SDK/tools:$ANDROID_NDK:$GOOGLETESTDIR:$PYTHON2:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/core_perl:$PATH
+
+export RUBY_GEM=$HOME/.gem/ruby/2.1.0/bin
+
+export PATH=$IV/$CPU/bin:$N/$CPU/bin:$ANDROID_SDK/platform-tools:$ANDROID_SDK/tools:$ANDROID_NDK:$PYTHON2:$RUBY_GEM:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/core_perl:$PATH

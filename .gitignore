@@ -1,3 +1,7 @@
 .vim/bundle
 .vim/eclim
 .vim/plugin
+
+.mutt/cache/bodies/*
+.mutt/cache/headers/*
+!.gitignore

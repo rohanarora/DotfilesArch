@@ -228,3 +228,6 @@ function SetGPGOptions()
 	" Only open folds with insert commands.
 	set foldopen=insert
 endfunction
+
+" limit width of text to 72 chars for mutt
+au BufRead /tmp/mutt-* set tw=72

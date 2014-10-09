@@ -27,6 +27,9 @@ Plugin 'nathanaelkane/vim-indent-guides'
 "for gnupg
 Plugin 'jamessan/vim-gnupg'
 
+" for calendar
+Plugin 'itchyny/calendar.vim'
+
 call vundle#end()
 
 "}
@@ -231,3 +234,7 @@ endfunction
 
 " limit width of text to 72 chars for mutt
 au BufRead /tmp/mutt-* set tw=72
+
+" for calendar.vim
+let g:calendar_google_calendar = 1
+let g:calendar_google_task = 1

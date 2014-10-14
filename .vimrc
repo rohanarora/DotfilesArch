@@ -5,7 +5,7 @@ set nocompatible
 set t_Co=256
 "}
 "Plugins{
-set rtp+=~/dotfiles/.vim/bundle/Vundle.vim
+set rtp+=~/dotfiles/.vim/bundle/Vundle.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,~/dotfiles/.vim/after
 call vundle#begin()
 
 Plugin 'gmarik/vundle'
@@ -204,8 +204,14 @@ nmap <leader>md :%!/usr/bin/vendor_perl/Markdown.pl --html4tags <cr>
 "}
 
 " run make on saving LaTeX file
-:autocmd BufWritePost *.tex make
+" :autocmd BufWritePost *.tex make
 
+" vim-latexsuite
+set grepprg=grep\ -nH\ $*
+let g:tex_flavor = "latex"
+let g:Tex_CompileRule_pdf='pdflatex -interaction=nonstopmode $*'
+let g:Tex_DefaultTargetFormat='pdf'
+let g:Tex_UseMakefile=0
 " Source: http://pig-monkey.com/2013/04/4/password-management-vim-gnupg/
 " GnuPG Extensions "
 " tells the GnuPG plugin to armor new files.
@@ -236,5 +242,5 @@ endfunction
 au BufRead /tmp/mutt-* set tw=72
 
 " for calendar.vim
-let g:calendar_google_calendar = 1
-let g:calendar_google_task = 1
+" let g:calendar_google_calendar = 1
+" let g:calendar_google_task = 1

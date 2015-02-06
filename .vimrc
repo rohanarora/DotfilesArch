@@ -30,6 +30,9 @@ Plugin 'jamessan/vim-gnupg'
 " for calendar
 Plugin 'itchyny/calendar.vim'
 
+" for instant-markdown
+Plugin 'suan/vim-instant-markdown'
+
 call vundle#end()
 
 "}
@@ -216,6 +219,9 @@ let g:Tex_UseMakefile=0
 " GnuPG Extensions "
 " tells the GnuPG plugin to armor new files.
 let g:GPGPreferArmor=1
+
+" run make on F5
+:map <f12> :make
 
 " tells the GnuPG plugin to sign new files.
 let g:GPGPreferSign=1

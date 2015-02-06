@@ -9,7 +9,7 @@ set rtp+=~/dotfiles/.vim/bundle/Vundle.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfil
 call vundle#begin()
 
 Plugin 'gmarik/vundle'
-" Plugin 'Valloric/YouCompleteMe'
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-fugitive'
@@ -21,8 +21,8 @@ Plugin 'Lokaltog/vim-easymotion'
 " error checking
 Plugin 'https://github.com/scrooloose/syntastic.git'
 Plugin 'nathanaelkane/vim-indent-guides'
-"for javascript
-"Plugin 'pangloss/vim-javascript'
+" for javascript
+" Plugin 'pangloss/vim-javascript'
 
 "for gnupg
 Plugin 'jamessan/vim-gnupg'
@@ -32,6 +32,18 @@ Plugin 'itchyny/calendar.vim'
 
 " for instant-markdown
 Plugin 'suan/vim-instant-markdown'
+
+" for UltiSnips
+" Track the engine
+Plugin 'SirVer/ultisnips'
+" Snippets are separated from the engine. Add this if you want them:
+Plugin 'honza/vim-snippets'
+
+" change from current working directory to project root
+Plugin 'airblade/vim-rooter'
+
+" auto-completion for quotes, brackets, parenthesis
+Plugin 'Raimondi/delimitMate'
 
 call vundle#end()
 
@@ -244,9 +256,25 @@ function SetGPGOptions()
 	set foldopen=insert
 endfunction
 
-" limit width of text to 72 chars for mutt
-au BufRead /tmp/mutt-* set tw=72
-
 " for calendar.vim
 " let g:calendar_google_calendar = 1
 " let g:calendar_google_task = 1
+
+" for UltiSnips
+" Trigger configuration
+let g:UltiSnipsExpandTrigger="<c-e>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+
+" for CtrlP
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+
+" restricting vim-rooter trigger to certain files
+" let g:rooter_autocmd_patterns = '*.java'
+
+" eclim + YouCompleteMe
+let g:EclimCompletionMethod = 'omnifunc'

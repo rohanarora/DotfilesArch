@@ -100,6 +100,9 @@ set softtabstop=2
 
 " activate folding
 set foldmethod=indent
+
+" set textwidth; followed by 'gqq' on the line to be wrapped
+set tw=80
 "}
 
 

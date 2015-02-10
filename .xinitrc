@@ -17,4 +17,5 @@ fi
 # exec startxfce4
 # ...or the Window Manager of your choice
 [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
+numlockx &
 exec awesome

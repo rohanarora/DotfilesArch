@@ -10,6 +10,9 @@ ZSH_THEME="blinks"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias virtual="source ~/rithmio/repo/env/bin/activate"
+alias project="cd ~/rithmio/repo"
+alias ml="cd ~/SpiderOak/ML-Project"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"

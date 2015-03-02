@@ -18,4 +18,5 @@ fi
 # ...or the Window Manager of your choice
 [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
 numlockx &
+xbindkeys &
 exec awesome

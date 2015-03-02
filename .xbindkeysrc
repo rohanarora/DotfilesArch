@@ -37,14 +37,24 @@
 #keystate_scrolllock= enable
 
 # decrease screen brightness
-"xbacklight -dec 20"
+"xbacklight -dec 10"
 	m:0x10 + c:232
-#Mod2 + XF86MonBrightnessUp
+#Mod2 + XF86MonBrightnessDown
 
 # increase screen brightness
-"xbacklight -inc 20"
+"xbacklight -inc 10"
 	m:0x10 + c:233
 #Mod2 + XF86MonBrightnessUp
+
+# decrease keyboard backlight brightness
+"kbdlight down"
+	m:0x10 + c:237
+#Mod2 + XF86KbdBrightnessDown
+
+# increase keyboard backlight brightness
+"kbdlight up"
+	m:0x10 + c:238
+#Mod2 + XF86KbdBrightnessUp
 
 # mute
 "amixer -D 0 -c 1 sset Master mute"

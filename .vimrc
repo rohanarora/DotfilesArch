@@ -102,7 +102,7 @@ set softtabstop=2
 set foldmethod=indent
 
 " set textwidth; followed by 'gqq' on the line to be wrapped
-set tw=80
+" set tw=80
 "}
 
 

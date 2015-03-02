@@ -89,8 +89,8 @@ tags = {}
 
 -- {{{
 tags = {
-	names = {"www", "docs", "dev1", "dev2", "mail", "music", "im", 8, 9},
-	layout = {layouts[2], layouts[2], layouts[1], layouts[1], layouts[1], layouts[1], layouts[4], layouts[5], layouts[6]
+	names = {"www", "docs", "dev1", "dev2", "dev3", "mail", "music", "im", 9},
+	layout = {layouts[2], layouts[2], layouts[1], layouts[1], layouts[7], layouts[1], layouts[4], layouts[5], layouts[6]
 }}
 
 for s = 1, screen.count() do
@@ -377,15 +377,29 @@ awful.rules.rules = {
                      keys = clientkeys,
                      buttons = clientbuttons,
 										 size_hints_honor = false } },
-    { rule = { class = "MPlayer" },
-      properties = { floating = true } },
-    { rule = { class = "pinentry" },
-      properties = { floating = true } },
-    { rule = { class = "gimp" },
+    { rule = { class = "Gimp" },
       properties = { floating = true } },
     -- Set Firefox to always map on tags number 2 of screen 1.
-    -- { rule = { class = "Firefox" },
-    --   properties = { tag = tags[1][2] } },
+    { rule = { class = "Firefox" },
+			properties = { tag = tags[1][1] } },
+		{ rule = { class = " " },
+			properties = { tag = tags[1][5] } },
+		{ rule = { class = "Eog" },
+			properties = { tag = tags[1][5] } },
+		{ rule = { class = "Thunderbird" },
+			properties = { tag = tags[1][6]} },
+		{ rule = { class = "Vlc" },
+			properties = { tag = tags[1][7] } },
+		{ rule = { class = "Spotify" },
+			properties = { tag = tags[1][7] } },
+		{ rule = { class = "Skype" },
+			properties = { tag = tags[1][8] } },
+		{ rule = { class = "ViberPC" },
+			properties = { tag = tags[1][8] } },
+		{ rule = { class = "XChat" },
+			properties = { tag = tags[1][8] } },
+		{ rule = { class = "SpiderOak" },
+			properties = { tag = tags[1][9] } },
 }
 -- }}}
 

@@ -235,8 +235,8 @@ let g:Tex_UseMakefile=0
 " tells the GnuPG plugin to armor new files.
 let g:GPGPreferArmor=1
 
-" run make on F5
-:map <f12> :make
+" run python on F5
+nnoremap <silent> <F5> :!python %<CR>
 
 " tells the GnuPG plugin to sign new files.
 let g:GPGPreferSign=1

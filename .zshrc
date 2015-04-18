@@ -95,6 +95,8 @@ export RUBY_GEM=$HOME/.gem/ruby/2.1.0/bin
 
 export PATH=$IV/$CPU/bin:$N/$CPU/bin:$ANDROID_SDK/platform-tools:$ANDROID_SDK/tools:$ANDROID_NDK:$PYTHON2:$RUBY_GEM:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/core_perl:$PATH
 
+export QT_SELECT=4
+
 # Alias for pacman
-alias pacupg='sudo pacman -Syu'		# Synchronize with repositories and then upgrade packages that are out of date on the local system.
-alias pacmir='sudo pacman -Syy'                    # Force refresh of all package lists after updating /etc/pacman.d/mirrorlist
+alias pacupg='sudo pacman -Syu'	# Synchronize with repositories and then upgrade packages that are out of date on the local system.
+alias pacmir='sudo pacman -Syy'	# Force refresh of all package lists after updating /etc/pacman.d/mirrorlist

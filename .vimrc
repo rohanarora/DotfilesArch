@@ -281,3 +281,8 @@ let g:ctrlp_cmd = 'CtrlP'
 
 " eclim + YouCompleteMe
 let g:EclimCompletionMethod = 'omnifunc'
+
+" clipboard
+:map <F7> :w !xclip<CR><CR>
+:vmap <F7> "*y
+:map <S-F7> :r!xclip -o<CR>

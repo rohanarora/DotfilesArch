@@ -1,6 +1,7 @@
 ! Xft settings ---------------------------------------------------------------
 
-Xft.dpi:        180
+Xft.dpi:        96
+Xft.autohint:   false
 Xft.antialias:  true
 Xft.rgba:       rgb
 Xft.hinting:    true
@@ -25,8 +26,8 @@ URxvt*loginShell: true
 URxvt.letterSpace: -1
 
 ! Disable perl extensions
-URxvt.perl-ext:
-URxvt.perl-ext-common:
+! URxvt.perl-ext:
+URxvt.perl-ext-common: default, selection-to-clipboard
 
 ! Save lines
 URxvt*saveLines: 5000

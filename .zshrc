@@ -80,20 +80,21 @@ export EDITOR='vim'
 export ARCHFLAGS="-arch $(uname -m)"
 
 # Android Developer SDK
-export ANDROID_SDK=$HOME/android/adt-bundle-linux-x86_64/sdk
-export ANDROID_NDK=$HOME/android/android-ndk-r10
+export ANDROID_SDK=$HOME/android/android-sdk-linux
+# export ANDROID_NDK=$HOME/android/android-ndk-r10
 
-#Neuron Setup
-export IV=$HOME/CSL/NEURON/iv
-export N=$HOME/CSL/NEURON/nrn
-export CPU=x86_64
+# Neuron Setup
+# export IV=$HOME/CSL/NEURON/iv
+# export N=$HOME/CSL/NEURON/nrn
+# export CPU=x86_64
+# export PATH=$IV/$CPU/bin:$N/$CPU/bin:$ANDROID_SDK/platform-tools:$ANDROID_SDK/tools:$PYTHON2:$RUBY_GEM:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/core_perl:$PATH
 
 # bin for python2
 export PYTHON2=$HOME/bin
 
 export RUBY_GEM=$HOME/.gem/ruby/2.1.0/bin
 
-export PATH=$IV/$CPU/bin:$N/$CPU/bin:$ANDROID_SDK/platform-tools:$ANDROID_SDK/tools:$ANDROID_NDK:$PYTHON2:$RUBY_GEM:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/core_perl:$PATH
+export PATH=$ANDROID_SDK/platform-tools:$ANDROID_SDK/tools:$PYTHON2:$RUBY_GEM:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/core_perl:$PATH
 
 export QT_SELECT=4
 

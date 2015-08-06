@@ -81,7 +81,9 @@ export ARCHFLAGS="-arch $(uname -m)"
 
 # Android Developer SDK
 export ANDROID_SDK=$HOME/android/android-sdk-linux
-# export ANDROID_NDK=$HOME/android/android-ndk-r10
+export ANDROID_NDK=$HOME/android/android-ndk-r10e
+
+export ANACONDA=/home/rohanarora/anaconda
 
 # Neuron Setup
 # export IV=$HOME/CSL/NEURON/iv
@@ -94,9 +96,14 @@ export PYTHON2=$HOME/bin
 
 export RUBY_GEM=$HOME/.gem/ruby/2.1.0/bin
 
-export PATH=$ANDROID_SDK/platform-tools:$ANDROID_SDK/tools:$PYTHON2:$RUBY_GEM:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/core_perl:$PATH
+export GOPATH=~/go
+# for build tool for Scala
+#export SCALA_SBT=$HOME/external/bigdata/sbt
+
+export PATH=$ANACONDA/bin:$GOPATH/bin:$ANDROID_SDK/platform-tools:$ANDROID_SDK/tools:$ANDROID_NDK:$PYTHON2:$RUBY_GEM:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/core_perl:$PATH
 
 export QT_SELECT=4
+
 
 # Alias for pacman
 alias pacupg='sudo pacman -Syu'	# Synchronize with repositories and then upgrade packages that are out of date on the local system.

@@ -5,14 +5,11 @@ export ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="blinks"
+ZSH_THEME="jtriley"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias virtual="source ~/rithmio/repo/env/bin/activate"
-alias project="cd ~/rithmio/repo"
-alias ml="cd ~/SpiderOak/ML-Project"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -83,27 +80,21 @@ export ARCHFLAGS="-arch $(uname -m)"
 export ANDROID_SDK=$HOME/android/android-sdk-linux
 export ANDROID_NDK=$HOME/android/android-ndk-r10e
 
-export ANACONDA=/home/rohanarora/anaconda
-
-# Neuron Setup
-# export IV=$HOME/CSL/NEURON/iv
-# export N=$HOME/CSL/NEURON/nrn
-# export CPU=x86_64
-# export PATH=$IV/$CPU/bin:$N/$CPU/bin:$ANDROID_SDK/platform-tools:$ANDROID_SDK/tools:$PYTHON2:$RUBY_GEM:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/core_perl:$PATH
-
-# bin for python2
-export PYTHON2=$HOME/bin
-
-export RUBY_GEM=$HOME/.gem/ruby/2.1.0/bin
+export ANACONDA=$HOME/anaconda
 
 export GOPATH=~/go
-# for build tool for Scala
-#export SCALA_SBT=$HOME/external/bigdata/sbt
 
-export PATH=$ANACONDA/bin:$GOPATH/bin:$ANDROID_SDK/platform-tools:$ANDROID_SDK/tools:$ANDROID_NDK:$PYTHON2:$RUBY_GEM:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/core_perl:$PATH
+# SCALA - Play Framework
+export SCALA_PLAY=$HOME/makingtheleap/activator-1.3.6-minimal
+export HEROKU=/usr/local/heroku
+
+# export CPU=x86_64
+export PATH=$HEROKU/bin:$SCALA_PLAY:$GOPATH/bin:$ANDROID_SDK/platform-tools:$ANDROID_SDK/tools:$ANDROID_NDK:$ANACONDA/bin:$HOME/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/core_perl:$PATH
+# export PATH=$GOPATH/bin:$ANDROID_SDK/platform-tools:$ANDROID_SDK/tools:$ANDROID_NDK:$HOME/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/core_perl:$PATH
 
 export QT_SELECT=4
 
+export BROWSER="firefox"
 
 # Alias for pacman
 alias pacupg='sudo pacman -Syu'	# Synchronize with repositories and then upgrade packages that are out of date on the local system.

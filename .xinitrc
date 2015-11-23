@@ -19,4 +19,5 @@ fi
 [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
 numlockx &
 xbindkeys &
+/usr/bin/dropbox &
 exec awesome

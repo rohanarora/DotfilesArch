@@ -80,12 +80,12 @@ export ARCHFLAGS="-arch $(uname -m)"
 export ANDROID_SDK=$HOME/android/android-sdk-linux
 export ANDROID_NDK=$HOME/android/android-ndk-r10e
 
-export ANACONDA=$HOME/anaconda
+export ANACONDA=$HOME/anaconda2
 
 export GOPATH=~/go
 
-# SCALA - Play Framework
-export SCALA_PLAY=$HOME/makingtheleap/activator-1.3.6-minimal
+# Scala Framework
+export SCALA_PLAY=$HOME/Tresors/activator-dist-1.3.7
 export HEROKU=/usr/local/heroku
 
 # export CPU=x86_64
@@ -96,6 +96,8 @@ export QT_SELECT=4
 
 export BROWSER="firefox"
 
+# For Hadoop
+export FINDBUGS_HOME=$HOME/hadoop/findbugs-3.0.1
 # Alias for pacman
 alias pacupg='sudo pacman -Syu'	# Synchronize with repositories and then upgrade packages that are out of date on the local system.
 alias pacmir='sudo pacman -Syy'	# Force refresh of all package lists after updating /etc/pacman.d/mirrorlist

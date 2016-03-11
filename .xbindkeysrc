@@ -36,38 +36,38 @@
 #keystate_capslock = enable
 #keystate_scrolllock= enable
 
-# decrease screen brightness
-"xbacklight -dec 10"
-	m:0x10 + c:232
-#Mod2 + XF86MonBrightnessDown
-
-# increase screen brightness
-"xbacklight -inc 10"
-	m:0x10 + c:233
-#Mod2 + XF86MonBrightnessUp
-
-# decrease keyboard backlight brightness
-"kbdlight down"
-	m:0x10 + c:237
-#Mod2 + XF86KbdBrightnessDown
-
-# increase keyboard backlight brightness
-"kbdlight up"
-	m:0x10 + c:238
-#Mod2 + XF86KbdBrightnessUp
+## decrease screen brightness
+#"xbacklight -dec 10"
+#	m:0x10 + c:232
+##Mod2 + XF86MonBrightnessDown
+#
+## increase screen brightness
+#"xbacklight -inc 10"
+#	m:0x10 + c:233
+##Mod2 + XF86MonBrightnessUp
+#
+## decrease keyboard backlight brightness
+#"kbdlight down"
+#	m:0x10 + c:237
+##Mod2 + XF86KbdBrightnessDown
+#
+## increase keyboard backlight brightness
+#"kbdlight up"
+#	m:0x10 + c:238
+##Mod2 + XF86KbdBrightnessUp
 
 # mute
-"amixer -D 0 -c 1 sset Master mute"
+"amixer set Master mute"
 	m:0x10 + c:121
 #Mod2 + XF86AudioMute
 
 # lower volume
-"amixer -D 0 -c 1 sset Master 3dB-"
+"amixer set Master 5%-"
 	m:0x10 + c:122
 #Mod2 + XF86AudioLowerVolume
 
 # raise volume
-"amixer -D 0 -c 1 sset Master 3dB+ unmute"
+"amixer set Master 5%+ unmute"
 	m:0x10 + c:123
 #Mod2 + XF86AudioRaiseVolume
 
